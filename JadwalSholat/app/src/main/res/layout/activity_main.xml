@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:orientation="vertical">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_gravity="center">
+
+        <ImageView
+                android:id="@+id/greeting_img"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"/>
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+            <androidx.cardview.widget.CardView
+                    android:id="@+id/car4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="11dp"
+                    android:background="#fff"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp">
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center">
+
+                    <TextView
+                            android:id="@+id/tv_tanggal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="5dp"
+                            android:textColor="#000"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+
+                    <LinearLayout
+                            android:id="@+id/garis"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/tv_tanggal"
+                            android:layout_marginTop="10dp"
+                            android:background="#f0efef"
+                            android:orientation="horizontal"/>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/garis"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                        <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:layout_marginRight="25dp"
+                                android:layout_marginLeft="25dp"
+                                android:background="?attr/selectableItemBackground"
+                                android:gravity="center">
+
+                            <Spinner
+                                    android:id="@+id/kota"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:padding="8.0dip">
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical">
+
+                <TextView
+                        android:id="@+id/greeting_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:textColor="#000"
+                        android:textSize="15dp"
+                        android:textStyle="bold"/>
+
+                <!--<TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/greeting_text"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:text="Jangan lupa sholat..."
+                        android:textColor="#000"
+                        android:textSize="10dp"/>-->
+
+            </RelativeLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:gravity="center"
+                          android:orientation="vertical">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                            android:id="@+id/noWhatsapp"
+                            android:layout_width="340dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            app:cardBackgroundColor="@android:color/holo_blue_light"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardCornerRadius="8dp">
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                            <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_marginTop="5dp"
+                                    android:src="@drawable/adzan"
+                                    android:layout_height="80dp"/>
+
+                            <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_margin="10dp"
+                                    android:background="#fff"/>
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Waktu Adzan Subuh"
+                                    android:textColor="#fff"
+                                    android:textStyle="bold"/>
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:id="@+id/tv_subuh"
+                                    android:text="Subuh"
+                                    android:textColor="#fff"
+                                    android:textStyle="bold"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                            android:layout_width="160dp"
+                            android:layout_height="170dp"
+                            android:layout_margin="10dp"
+                            app:cardBackgroundColor="@android:color/holo_purple"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="5dp">
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                            <ImageView
+                                    android:layout_width="80dp"
+                                    android:src="@drawable/adzan"
+                                    android:layout_height="80dp"/>
+
+                            <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_margin="10dp"
+                                    android:background="#fff"/>
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Waktu Adzan Dzuhur"
+                                    android:textColor="#fff"
+                                    android:textStyle="bold"/>
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:id="@+id/tv_dzuhur"
+                                    android:text="Dzuhur"
+                                    android:textColor="#fff"
+                                    android:textStyle="bold"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                            android:layout_width="160dp"
+                            android:layout_height="170dp"
+                            android:layout_margin="10dp"
+                            app:cardBackgroundColor="@android:color/holo_orange_light"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="5dp">
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                            <ImageView
+                                    android:layout_width="80dp"
+                                    android:src="@drawable/adzan"
+                                    android:layout_height="80dp"/>
+
+                            <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_margin="10dp"
+                                    android:background="#fff"/>
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Waktu Adzan Ashar"
+                                    android:textColor="#fff"
+                                    android:textStyle="bold"/>
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:id="@+id/tv_ashar"
+                                    android:text="Ashar"
+                                    android:textColor="#fff"
+                                    android:textStyle="bold"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                            android:layout_width="160dp"
+                            android:layout_height="170dp"
+                            android:layout_margin="10dp"
+                            app:cardBackgroundColor="@android:color/holo_red_light"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="5dp">
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                            <ImageView
+                                    android:layout_width="80dp"
+                                    android:src="@drawable/adzan"
+                                    android:layout_height="80dp"/>
+
+                            <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_margin="10dp"
+                                    android:background="#fff"/>
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Waktu Adzan Maghrib"
+                                    android:textColor="#fff"
+                                    android:textStyle="bold"/>
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:id="@+id/tv_maghrib"
+                                    android:text="Maghrib"
+                                    android:textColor="#fff"
+                                    android:textStyle="bold"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                            android:layout_width="160dp"
+                            android:layout_height="170dp"
+                            android:layout_margin="10dp"
+                            app:cardBackgroundColor="@android:color/holo_green_light"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="5dp">
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                            <ImageView
+                                    android:layout_width="80dp"
+                                    android:src="@drawable/adzan"
+                                    android:layout_height="80dp"/>
+
+                            <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_margin="10dp"
+                                    android:background="#fff"/>
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Waktu Adzan Isya"
+                                    android:textColor="#fff"
+                                    android:textStyle="bold"/>
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:id="@+id/tv_isya"
+                                    android:text="Isya"
+                                    android:textColor="#fff"
+                                    android:textStyle="bold"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
